@@ -9,11 +9,18 @@
         @else
             <link rel="stylesheet" type="text/css" href="{{ url('/css/tailwindcss-4-0-7.css') }}" />
         @endif
+        <style type="text/tailwindcss">
+          @theme {
+            --breakpoint-3xl: 120rem; /* 1920px */
+            --breakpoint-4xl: 160rem; /* 2560px */
+            --breakpoint-5xl: 240rem; /* 3840px */
+          }
+        </style>
     </head>
-    <body>
-        <div class="bg-black" id="container">
+    <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%">
+        <div class="3xl:w-[1905px] justify-self-center" id="container">
 
-            <header class="grid grid-cols-2 md:grid-cols-3 gap-4 p-5 lg:p-10 sticky top-0 bg-linear-to-b from-black to-transparent drop-shadow-xl/50 text-white" id="header">
+            <header class="grid grid-cols-2 md:grid-cols-3 gap-4 sticky top-0 bg-linear-to-b from-black to-transparent drop-shadow-md/50 text-white p-5 lg:p-10" id="header">
                 <div class="text-lg lg:text-2xl font-medium">
                     <h1><a href="javascript:;">Sanat Teorisi</a></h1>
                 </div>
