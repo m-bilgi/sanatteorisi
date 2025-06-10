@@ -8,14 +8,14 @@
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
             <link rel="stylesheet" type="text/css" href="{{ url('/css/tailwindcss-4-0-7.css') }}" />
+            <style type="text/tailwindcss">
+              @theme {
+                --breakpoint-3xl: 120rem; /* 1920px */
+                --breakpoint-4xl: 160rem; /* 2560px */
+                --breakpoint-5xl: 240rem; /* 3840px */
+              }
+            </style>
         @endif
-        <style type="text/tailwindcss">
-          @theme {
-            --breakpoint-3xl: 120rem; /* 1920px */
-            --breakpoint-4xl: 160rem; /* 2560px */
-            --breakpoint-5xl: 240rem; /* 3840px */
-          }
-        </style>
     </head>
     <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%">
         <div class="3xl:w-[1905px] justify-self-center" id="container">
