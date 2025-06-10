@@ -7,17 +7,17 @@
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
-            <link rel="stylesheet" type="text/css" href="{{ url('/css/tailwindcss-4-0-7.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ url('/css/tailwindcss-4-0-7.css') }}">
             <style type="text/tailwindcss">
-              @theme {
-                --breakpoint-3xl: 120rem; /* 1920px */
-                --breakpoint-4xl: 160rem; /* 2560px */
-                --breakpoint-5xl: 240rem; /* 3840px */
-              }
-            </style>
+                @theme {
+                  --breakpoint-3xl: 120rem; /* 1920px */
+                  --breakpoint-4xl: 160rem; /* 2560px */
+                  --breakpoint-5xl: 240rem; /* 3840px */
+                }
+              </style>
         @endif
     </head>
-    <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%">
+    <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%" id="body">
         <div class="3xl:w-[1905px] justify-self-center" id="container">
 
             <header class="grid grid-cols-2 md:grid-cols-3 gap-4 sticky top-0 bg-linear-to-b from-black to-transparent drop-shadow-md/50 text-white p-5 lg:p-10" id="header">
@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <main class="grid bg-gray-300" id="main">
+            <main class="bg-gray-300" id="main">
                 <div class="grid grid-cols-1 lg:grid-cols-2 bg-gray-300 text-slate-200">
                     <div class="p-10 text-gray-600 bg-gray-50" id="best-articles">
                         <h2 class="flex p-3 text-2xl font-bold">EN İYİ MAKALELER</h2>
@@ -111,8 +111,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 p-10 bg-gray-200"
-                    id="gallery">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 p-10 bg-gray-200" id="gallery">
                     <div class="">
                         <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
                     </div>
@@ -134,8 +133,22 @@
                 </div>
             </main>
 
-            <div class="p-10 bg-gray-400" id="bottom">
-                Bottom
+            <div class="flex justify-between px-10 py-5 bg-gray-400" id="bottom">
+                <div class="hidden md:flex w-10 -rotate-180 font-black text-4xl text-gray-200" style="writing-mode:tb-rl">Sanat Teorisi</div>
+                <div class="w-10">1</div>
+                <div>
+                    <ul>
+                        <li><a href="javascript:;">Link 1</a></li>
+                        <li><a href="javascript:;">Link 1</a></li>
+                        <li><a href="javascript:;">Link 1</a></li>
+                        <li><a href="javascript:;">Link 1</a></li>
+                        <li><a href="javascript:;">Link 1</a></li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <a href="">H</a>
+                    <a href="#body">T</a>
+                </div>
             </div>
 
             <footer class="p-10 bg-gray-800 text-gray-500 text-right text-sm" id="footer">
