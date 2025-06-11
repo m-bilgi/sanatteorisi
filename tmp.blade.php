@@ -4,18 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sanat Teorisi</title>
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <link rel="stylesheet" type="text/css" href="{{ url('/css/tailwindcss-4-0-7.css') }}">
-            <style type="text/tailwindcss">
-                @theme {
-                  --breakpoint-3xl: 120rem; /* 1920px */
-                  --breakpoint-4xl: 160rem; /* 2560px */
-                  --breakpoint-5xl: 240rem; /* 3840px */
-                }
-              </style>
-        @endif
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+          @theme {
+            --breakpoint-3xl: 120rem; /* 1920px */
+            --breakpoint-4xl: 160rem; /* 2560px */
+            --breakpoint-5xl: 240rem; /* 3840px */
+          }
+        </style>
     </head>
     <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%" id="body">
         <div class="3xl:w-[1905px] justify-self-center" id="container">
@@ -42,12 +38,12 @@
                             </svg>
                         </label>
                         <div class="hidden peer-checked:block absolute mt-5 -ml-14 left-1/2 -translate-x-1/2 w-40 shadow-lg z-9 bg-black" id="dropdown">
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Galeri</a>
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Makale</a>
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Şiir</a>
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sözlük</a>
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sign up</a>
-                            <a href="javascript:;" for="menu-toggle" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Login</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Galeri</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Makale</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Şiir</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sözlük</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sign up</a>
+                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Login</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +107,13 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 p-10 bg-gray-200" id="gallery">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-10 bg-gray-200" id="gallery">
+                    <div class="">
+                        <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                    </div>
+                    <div class="">
+                        <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                    </div>
                     <div class="">
                         <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
                     </div>
@@ -134,7 +136,7 @@
             </main>
 
             <div class="flex justify-between px-10 py-5 bg-gray-400" id="bottom">
-                <div class="hidden md:flex w-10 -rotate-180 font-black text-4xl text-gray-200" style="writing-mode:tb-rl">Sanat Teorisi</div>
+                <div class="hidden md:flex w-10 -rotate-180 font-black text-5xl text-gray-200" style="writing-mode:vertical-lr">Sanat Teorisi</div>
                 <div class="w-10">1</div>
                 <div>
                     <ul>
@@ -145,9 +147,15 @@
                         <li><a href="javascript:;">Link 1</a></li>
                     </ul>
                 </div>
-                <div class="block">
-                    <a href="">H</a>
-                    <a href="#body">T</a>
+                <div class="flex items-end gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <a href="#body">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                    </a>
                 </div>
             </div>
 
@@ -159,9 +167,13 @@
     </body>
 </html>
 <!--
+* MEDIA RESOLUTION
 * Extra small devices (phones, 600px and down)
 * Small devices (portrait tablets and large phones, 600px and up)
 * Medium devices (landscape tablets, 768px and up)
 * Large devices (laptops/desktops, 992px and up)
 * Extra large devices (large laptops and desktops, 1200px and up)
+*
+* SVG ICONS PACK
+* https://heroicons.com/outline
 -->
