@@ -16,19 +16,24 @@
     <body class="bg-linear-to-b from-gray-700 from-20% to-white to-80%" id="body">
         <div class="3xl:w-[1905px] justify-self-center" id="container">
 
-            <header class="grid grid-cols-2 md:grid-cols-3 gap-4 sticky top-0 bg-linear-to-b from-black to-transparent drop-shadow-md/50 text-white p-5 lg:p-10" id="header">
+            <header class="grid grid-cols-2 md:grid-cols-3 sticky top-0 bg-linear-to-b from-black to-transparent backdrop-blur-[2px] drop-shadow-md/50 text-white p-5 lg:p-10" id="header">
                 <div class="text-lg lg:text-2xl font-medium">
-                    <h1><a href="javascript:;">Sanat Teorisi</a></h1>
+                    <h1><a href="/">Sanat Teorisi</a></h1>
                 </div>
-                <nav class="hidden md:flex gap-x-8 justify-start self-center lg:text-xl font-medium text-gray-400 uppercase">
+                <nav class="hidden md:flex gap-x-4 lg:gap-x-8 justify-start self-center lg:text-xl font-medium text-gray-400 uppercase">
                     <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Galeri</a>
                     <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Makale</a>
                     <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Şiir</a>
                     <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Sözlük</a>
                 </nav>
                 <div class="hidden md:flex self-center justify-end text-gray-400">
-                    Sign up | Login
+                    <a href="javascript:;" class="pr-2 text-sm text-[#06ff00] hover:underline">Yeni Üyelik</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                    </svg>
+                    <a href="javascript:;" class="text-sm hover:underline">Login</a>
                 </div>
+
                 <div class="flex md:hidden self-center justify-end" id="mobile-menu">
                     <div class="relative inline-block">
                         <input type="checkbox" class="hidden peer" id="menu-toggle">
@@ -47,17 +52,29 @@
                         </div>
                     </div>
                 </div>
+                <!--
+                <div class="flex group relative justify-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <div class="hidden group-hover:block absolute bg-black w-auto">
+                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Admission Process</div>
+                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">option 1</div>
+                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">option 2</div>
+                    </div>
+                </div>
+                -->
             </header>
 
-            <div class="grid grid-cols-1 gap-4 px-10 bg-gray-400" id="hero"><!--bg-[url(image.png)]-->
+            <section class="grid grid-cols-1 gap-4 px-5 lg:px-10 bg-gray-400" id="hero"><!--bg-[url(image.png)]-->
                 <div class="h-100">
                     Hero
                 </div>
-            </div>
+            </section>
 
             <main class="bg-gray-300" id="main">
                 <div class="grid grid-cols-1 lg:grid-cols-2 bg-gray-300 text-slate-200">
-                    <div class="p-10 text-gray-600 bg-gray-50" id="best-articles">
+                    <div class="p-5 lg:p-10 text-gray-600 bg-gray-50" id="best-articles">
                         <h2 class="flex p-3 text-2xl font-bold">EN İYİ MAKALELER</h2>
                         <p class="p-3 border-b border-gray-400">Makaleler bölümündeki en iyi 5 içerik.</p>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
@@ -81,7 +98,7 @@
                             <p>1750’lerden 1890’lara kadar süren ilk sanayi devrimi ardından, 2. Sanayi Devri 1896’larda başlayıp 1...</p>
                         </article>
                     </div>
-                    <div class="p-10 text-gray-600" id="last-articles">
+                    <div class="p-5 lg:p-10 text-gray-600" id="last-articles">
                         <h2 class="flex p-3 text-2xl font-bold">SON 5 MAKALE</h2>
                         <p class="p-3 border-b border-gray-400">Makaleler bölümündeki son 5 içerik.</p>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
@@ -135,8 +152,8 @@
                 </div>
             </main>
 
-            <div class="flex justify-between px-10 py-5 bg-gray-400" id="bottom">
-                <div class="hidden md:flex w-10 -rotate-180 font-black text-5xl text-gray-200" style="writing-mode:vertical-lr">Sanat Teorisi</div>
+            <div class="flex justify-between p-5 lg:px-10 bg-gray-400" id="bottom">
+                <div class="hidden md:flex w-10 -rotate-180 font-black text-5xl text-gray-200 select-none" style="writing-mode:vertical-lr">Sanat Teorisi</div>
                 <div class="w-10">1</div>
                 <div>
                     <ul>
@@ -159,7 +176,7 @@
                 </div>
             </div>
 
-            <footer class="p-10 bg-gray-800 text-gray-500 text-right text-sm" id="footer">
+            <footer class="p-5 lg:p-10 bg-gray-800 text-gray-500 text-right text-sm" id="footer">
                 <p>Resimlerin izin alınmadan kopyalanması ve kullanılması <a href="javascript:;" class="text-gray-300 hover:underline">5846 sayılı fikir ve sanat eserleri kanunu</a>na göre suçtur.</p>
                 <p>© 2003-2024 <span style="color: #1efe00;">SanatTeorisi</span>. Görsel yayınların tüm hakları ve sorumluluğu eser sahiplerine aittir.</p>
             </footer>
