@@ -66,7 +66,7 @@
                 -->
             </header>
 
-            <section class="grid grid-cols-1 gap-4 px-5 lg:px-10 bg-gray-400" id="hero"><!--bg-[url(image.png)]-->
+            <section class="grid grid-cols-1 gap-4 px-5 lg:px-10 bg-gray-400" id="hero">
                 <div class="h-100">
                     Hero
                 </div>
@@ -152,27 +152,76 @@
                 </div>
             </main>
 
-            <div class="flex justify-between p-5 lg:px-10 bg-gray-400" id="bottom">
-                <div class="hidden md:flex w-10 -rotate-180 font-black text-5xl text-gray-200 select-none" style="writing-mode:vertical-lr">Sanat Teorisi</div>
-                <div class="w-10">1</div>
-                <div>
-                    <ul>
-                        <li><a href="javascript:;">Link 1</a></li>
-                        <li><a href="javascript:;">Link 1</a></li>
-                        <li><a href="javascript:;">Link 1</a></li>
-                        <li><a href="javascript:;">Link 1</a></li>
-                        <li><a href="javascript:;">Link 1</a></li>
-                    </ul>
+            <div class="w-full" id="bottom">
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 p-5 pb-1 lg:px-10 bg-gray-300 text-gray-700" id="bottom-up">
+                    <div class="hidden lg:block w-10 -rotate-180 font-black text-4xl text-gray-400 select-none" style="writing-mode:vertical-lr">Sanat Teorisi</div>
+                    <div class="px-5 text-sm">
+                        <h3 class="lg:text-lg font-bold">Makaleler</h3>
+                        <p><a href="javascript:;" class="hover:underline">Popüler makaleler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok okunan makaleler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan makaleler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen makaleler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre makaleler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Toplam makale sayısı (390)</a></p>
+                    </div>
+                    <div class="px-5 text-sm">
+                        <h3 class="lg:text-lg font-bold">Şiirler</h3>
+                        <p><a href="javascript:;" class="hover:underline">Popüler şiirler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok okunan şiirler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan şiirler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen şiirler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre şiirler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Toplam şiir sayısı (2578)</a></p>
+                    </div>
+                    <div class="px-5 text-sm">
+                        <h3 class="lg:text-lg font-bold">Galeri</h3>
+                        <p><a href="javascript:;" class="hover:underline">Popüler resimler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok izlenen resimler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan resimler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen resimler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre resimler</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Toplam resim sayısı (1010)</a></p>
+                    </div>
+                    <div class="px-5 text-sm">
+                        <h3 class="lg:text-lg font-bold">Üye/Ziyaret</h3>
+                        <p><a href="javascript:;" class="hover:underline">Aktif üye sayısı (1)</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Aktif ziyaretçiler (0)</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Kayıtlı üye sayısı (1171)</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Yeni Üyelik</a></p>
+                    </div>
+                    <div class="col-2 col-start-2 lg:col-5 lg:col-start-5 flex justify-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                        <a href="#body">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-end gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                    <a href="#body">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                      </svg>
-                    </a>
+                <div class="flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700" id="bottom-down">
+                    <div class="text-sm">
+                        <h3 class="font-bold">Proje ve Referanslar</h3>
+                        <p><a href="javascript:;" class="hover:underline">sanatteorisi.com</a></p>
+                        <p><a href="javascript:;" class="hover:underline">sanatteorisi.net</a></p>
+                        <p><a href="javascript:;" class="hover:underline">mustafabilgi.com</a></p>
+                    </div>
+                    <div class="text-sm">
+                        <h3 class="font-bold">Sanat Teorisi</a></h3>
+                        <p><a href="javascript:;" class="hover:underline">Hakkımızda</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Gizlilik İlkesi</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Reklam</a></p>
+                        <p><a href="javascript:;" class="hover:underline">İletişim</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Site Haritası</a></p>
+                    </div>
+                    <div class="text-sm">
+                        <h3 class="font-bold">Yardım</h3>
+                        <p><a href="javascript:;" class="hover:underline">Kurallar</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Kullanım Klavuzu</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Sık Sorulan Sorular</a></p>
+                        <p><a href="javascript:;" class="hover:underline">Tüm Yardım Konuları</a></p>
+                    </div>
                 </div>
             </div>
 
