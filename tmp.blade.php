@@ -19,7 +19,8 @@
                     body {@apply bg-linear-to-b from-gray-700 from-20% to-white to-80%;}
                     h1 {@apply text-2xl lg:text-3xl font-medium;}
                     h2 {@apply text-xl lg:text-2xl font-bold;}
-                    h3 {@apply font-medium;}
+                    h3 {@apply md:text-lg lg:text-xl font-bold;}
+                    h4 {@apply font-medium;}
                     h5 {@apply lg:text-lg font-bold;}
                     h6 {@apply font-bold;}
                 }
@@ -89,23 +90,23 @@
                         <h2><span class="p-3">EN İYİ MAKALELER</span></h2>
                         <p class="p-3 border-b border-gray-400">Makaleler bölümündeki en iyi 5 içerik.</p>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Eser Analiz Yöntemleri</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Eser Analiz Yöntemleri</a></h4>
                             <p>Sanat olgusunun varlığını kavramanın en doğru yolu, sanat eserini çözümlemekte yatmaktadır. Bu konuy...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Türk Resminde Kurtuluş Savaşı Teması</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Türk Resminde Kurtuluş Savaşı Teması</a></h4>
                             <p>Sanatın toplumsal yapılara, bağlı gelişmesiyle, sanatçının yaratımını politik, ekonomik, kültürel şa...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Altın Oran</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Altın Oran</a></h4>
                             <p>“Altın oran kavramı ve bu kavramın gizemi nedir?” diye düşündüğünüz olmuştur. Belki de bu kavramı il...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Sokrates ve Felsefesi</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sokrates ve Felsefesi</a></h4>
                             <p>M.Ö. 469-399 yılları arasında yaşamış olan ünlü Yunanlı düşünür. Platon’un hocası olan Sokrates, yaz...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Modernizm ve Sanat Akımlarından Notlar</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Modernizm ve Sanat Akımlarından Notlar</a></h4>
                             <p>1750’lerden 1890’lara kadar süren ilk sanayi devrimi ardından, 2. Sanayi Devri 1896’larda başlayıp 1...</p>
                         </article>
                     </div>
@@ -113,29 +114,29 @@
                         <h2><span class="p-3">SON 5 MAKALE</span></h2>
                         <p class="p-3 border-b border-gray-400">Makaleler bölümündeki son 5 içerik.</p>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Sürreal Resimde Kadın İmgesi</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sürreal Resimde Kadın İmgesi</a></h4>
                             <p>Sürrealizm, sanat ve yaşam alanında radikal başkaldırı ve kural tanımaz tavrın 20 yüz yılın ilk çeyr...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Büyük Masturbator</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Büyük Masturbator</a></h4>
                             <p>Büyük Masturbator, Salvador Dalinin ikonik bir eseri ve ressamın sürrealist dönemine ait olarak kabu...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Ölümün Kitsch Bir İmge Örneği Olarak Günümüz İran’ında Üretilen Mezar Taşları</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Ölümün Kitsch Bir İmge Örneği Olarak Günümüz İran’ında Üretilen Mezar Taşları</a></h4>
                             <p>Farklı çağlarda ölümle ilgili üretilen imgeler, metafiziğe nasıl bakıldığını dışa vurmaktadır. Kitsc...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Sanatta Bedenin Uyku Hali</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sanatta Bedenin Uyku Hali</a></h4>
                             <p>Beden, canlının maddesel kanıtıdır. Bedeni betimlemek çağlar boyunca sanatın en önemli sorunsalların...</p>
                         </article>
                         <article class="block p-3 hover:bg-gray-200 transition duration-300">
-                            <h3><a href="javascript:;" class="text-orange-500 hover:underline">Orhan Pamuk’un Beyaz Kale Romanında Ayna Oyunları</a></h3>
+                            <h4><a href="javascript:;" class="text-orange-500 hover:underline">Orhan Pamuk’un Beyaz Kale Romanında Ayna Oyunları</a></h4>
                             <p>Genelde ayna varlıkların görüntüsünü yansıtan ya da süs olarak kullanılan eşyalardan biri olarak düş...</p>
                         </article>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-10 bg-gray-200" id="gallery">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-10 py-5 bg-gray-200" id="gallery">
                     <div class="">
                         <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
                     </div>
@@ -161,59 +162,105 @@
                         <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
                     </div>
                 </div>
-
-                <div class="grid py-2 px-10 bg-gray-200 rounded-xl" id="article-of-the-week">
-                    <div class="bg-gray-100 px-5">
-                        <h2>
-                            <label for="menu-collapse" class="cursor-pointer block py-5">Haftanın Yazısı: Dada Manifestosu</label>
-                        </h2>
-                    </div>
-                    <input type="checkbox" class="hidden peer" id="menu-collapse">
-                    <div class="hidden peer-checked:block px-5 bg-white">
-                        <h3>Dada Manifestosu</h3>
-                        <p>Gazetecileri beklenmedik bir dünyanın kapısına getiren bir sözcüğün – DADA – büyüsü, bizim için hiçbir önem taşımıyor..</p>
-                        <p>Yazar: Tristan Tzara</p>
-                    </div>
-                </div>
-
             </main>
 
-            <section class="w-full" id="bottom">
+            <section class="px-10 py-5 space-y-1 bg-gray-200" id="expand-collapse">
+                <details class="group px-5 rounded-xl bg-white text-gray-600" id="article-of-the-week-collapse">
+                    <summary class="flex justify-between py-5 select-none cursor-pointer">
+                        <h3>Haftanın Yazısı: Dada Manifestosu</h3>
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="pb-4 space-y-2 text-gray-600">
+                        <h4>Dada Manifestosu</h4>
+                        <p>Gazetecileri beklenmedik bir dünyanın kapısına getiren bir sözcüğün – DADA – büyüsü, bizim için hiçbir önem taşımıyor...</p>
+                        <p>Yazar: Tristan Tzara</p>
+                    </div>
+                </details>
+
+                <details class="group px-5 rounded-xl bg-white text-gray-600" id="poems-of-the-week-collapse">
+                    <summary class="flex justify-between py-5 select-none cursor-pointer">
+                        <h3>Haftanın Şiiri: Daha Ne Zaman</h3>
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="pb-4 space-y-2 text-gray-600">
+                        <h4>Daha Ne Zaman</h4>
+                        <p>
+                            Toz pembe hayaller<br>
+                            Kuran mebuslar,<br>
+                            Umutları, renkli<br>
+                            Geleceğe salmayın...<br>
+                            Halka gidip,<br>
+                            Ne kabuslar<br>
+                            Gördüklerini görün;<br>
+                            Aldatmayın!..<br>
+                            Yaşanan gerçekler<br>
+                            Somuttur;<br>
+                            Rakam oyunlarıyla<br>
+                            Kimse kanmaz,<br>
+                            Oynamayın!..<br>
+                            "İşler yolunda"<br>
+                            "Tıkırında" diyerek,<br>
+                            Ölüyor zaman!..<br>
+                            Gerçek;<br>
+                            İşsizim,cebim boş,<br>
+                            Midem de uğulduyor;<br>
+                            Acılar hep bana mı?..<br>
+                            Daha ne zaman?!..<br>
+                        </p>
+                        <p><b>Şair:</b> <a href="javascript:;" class="hover:underline">M.Nazım Güler</a></p>
+                    </div>
+                </details>
+            </section>
+
+            <section id="bottom">
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 p-5 pb-1 lg:px-10 bg-gray-300 text-gray-700" id="bottom-up">
                     <div class="hidden lg:block w-10 -rotate-180 font-black text-4xl text-gray-400 select-none" style="writing-mode:vertical-lr">Sanat Teorisi</div>
                     <div class="px-5 text-sm">
                         <h5>Makaleler</h5>
-                        <p><a href="javascript:;" class="hover:underline">Popüler makaleler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok okunan makaleler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan makaleler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen makaleler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre makaleler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Toplam makale (390)</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Popüler makaleler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok okunan makaleler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok yorum alan makaleler</a>
+                            <a href="javascript:;" class="block hover:underline">Yeni eklenen makaleler</a>
+                            <a href="javascript:;" class="block hover:underline">Alfabetik sıraya göre makaleler</a>
+                            <a href="javascript:;" class="block hover:underline">Toplam makale (390)</a>
+                        </nav>
+
                     </div>
                     <div class="px-5 text-sm">
                         <h5>Şiirler</h5>
-                        <p><a href="javascript:;" class="hover:underline">Popüler şiirler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok okunan şiirler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan şiirler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen şiirler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre şiirler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Toplam şiir (2578)</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Popüler şiirler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok okunan şiirler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok yorum alan şiirler</a>
+                            <a href="javascript:;" class="block hover:underline">Yeni eklenen şiirler</a>
+                            <a href="javascript:;" class="block hover:underline">Alfabetik sıraya göre şiirler</a>
+                            <a href="javascript:;" class="block hover:underline">Toplam şiir (2578)</a>
+                        </nav>
                     </div>
                     <div class="px-5 text-sm">
                         <h5>Galeri</h5>
-                        <p><a href="javascript:;" class="hover:underline">Popüler resimler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok izlenen resimler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">En çok yorum alan resimler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Yeni eklenen resimler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Alfabetik sıraya göre resimler</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Toplam resim (1010)</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Popüler resimler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok izlenen resimler</a>
+                            <a href="javascript:;" class="block hover:underline">En çok yorum alan resimler</a>
+                            <a href="javascript:;" class="block hover:underline">Yeni eklenen resimler</a>
+                            <a href="javascript:;" class="block hover:underline">Alfabetik sıraya göre resimler</a>
+                            <a href="javascript:;" class="block hover:underline">Toplam resim (1010)</a>
+                        </nav>
                     </div>
                     <div class="px-5 text-sm">
                         <h5>Üye/Ziyaret</h5>
-                        <p><a href="javascript:;" class="hover:underline">Aktif üye sayısı (1)</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Aktif ziyaretçiler (0)</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Kayıtlı üye (1171)</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Yeni Üyelik</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Aktif üye sayısı (1)</a>
+                            <a href="javascript:;" class="block hover:underline">Aktif ziyaretçiler (0)</a>
+                            <a href="javascript:;" class="block hover:underline">Kayıtlı üye (1171)</a>
+                            <a href="javascript:;" class="block hover:underline">Yeni Üyelik</a>
+                        </nav>
                     </div>
                     <div class="col-2 col-start-2 lg:col-5 lg:col-start-5 flex justify-end">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -229,24 +276,30 @@
                 <div class="flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700" id="bottom-down">
                     <div class="text-sm">
                         <h6>Proje ve Referanslar</h6>
-                        <p><a href="javascript:;" class="hover:underline">sanatteorisi.com</a></p>
-                        <p><a href="javascript:;" class="hover:underline">sanatteorisi.net</a></p>
-                        <p><a href="javascript:;" class="hover:underline">mustafabilgi.com</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">sanatteorisi.com</a>
+                            <a href="javascript:;" class="block hover:underline">sanatteorisi.net</a>
+                            <a href="javascript:;" class="block hover:underline">mustafabilgi.com</a>
+                        </nav>
                     </div>
                     <div class="text-sm">
                         <h6>Sanat Teorisi</h6>
-                        <p><a href="javascript:;" class="hover:underline">Hakkımızda</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Gizlilik İlkesi</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Reklam</a></p>
-                        <p><a href="javascript:;" class="hover:underline">İletişim</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Site Haritası</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Hakkımızda</a>
+                            <a href="javascript:;" class="block hover:underline">Gizlilik İlkesi</a>
+                            <a href="javascript:;" class="block hover:underline">Reklam</a>
+                            <a href="javascript:;" class="block hover:underline">İletişim</a>
+                            <a href="javascript:;" class="block hover:underline">Site Haritası</a>
+                        </nav>
                     </div>
                     <div class="text-sm">
                         <h6>Yardım</h6>
-                        <p><a href="javascript:;" class="hover:underline">Kurallar</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Kullanım Klavuzu</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Sık Sorulan Sorular</a></p>
-                        <p><a href="javascript:;" class="hover:underline">Tüm Yardım Konuları</a></p>
+                        <nav>
+                            <a href="javascript:;" class="block hover:underline">Kurallar</a>
+                            <a href="javascript:;" class="block hover:underline">Kullanım Klavuzu</a>
+                            <a href="javascript:;" class="block hover:underline">Sık Sorulan Sorular</a>
+                            <a href="javascript:;" class="block hover:underline">Tüm Yardım Konuları</a>
+                        </nav>
                     </div>
                 </div>
             </section>
@@ -271,8 +324,8 @@
 *
 * h1: Only Logo
 * h2: UI & section title (example: 'Best Articles', 'Top 10 Topics' etc...)
-* h3: Content title
-* h4: n/a
+* h3: UI & section title (example: 'Best Articles', 'Top 10 Topics' etc...)
+* h4: Content title
 * h5: UI bottom title
 * h6: UI bottom & footer title
 -->
