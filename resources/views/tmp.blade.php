@@ -14,9 +14,9 @@
                   --breakpoint-4xl: 160rem; /* 2560px */
                   --breakpoint-5xl: 240rem; /* 3840px */
                 }
-                @layer{
+                @layer base {
                     html {@apply scroll-smooth;}
-                    body {@apply bg-linear-to-b from-gray-700 from-20% to-white to-80%;}
+                    /*body {@apply bg-linear-to-b from-gray-700 from-20% to-white to-80%;}*/
                     h1 {@apply text-2xl lg:text-3xl font-medium;}
                     h2 {@apply text-xl lg:text-2xl font-bold;}
                     h3 {@apply md:text-lg lg:text-xl font-bold;}
@@ -24,63 +24,79 @@
                     h5 {@apply lg:text-lg font-bold;}
                     h6 {@apply font-bold;}
                 }
+                @layer components {
+                    .testCard {background-color: var(--color-red-700);}
+                }
             </style>
         @endif
     </head>
     <body id="body">
         <div class="3xl:w-[1905px] justify-self-center" id="container">
 
-            <header class="grid grid-cols-2 md:grid-cols-3 p-5 lg:p-10 sticky top-0 bg-linear-to-b from-black to-transparent backdrop-blur-[2px] drop-shadow-md/50 text-white z-50" id="header">
-                <h1><a href="/">Sanat Teorisi</a></h1>
-                <nav class="hidden md:flex gap-x-4 lg:gap-x-8 justify-start self-center lg:text-xl font-medium text-gray-400 uppercase">
-                    <a href="javascript:;" class="hover:text-orange-400 transition duration-300 ease-in-out">Galeri</a>
-                    <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Makale</a>
-                    <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Şiir</a>
-                    <a href="javascript:;" class="hover:text-orange-400 transition duration-300">Sözlük</a>
-                </nav>
-                <div class="hidden md:flex self-center justify-end text-gray-400">
+            <header class="flex justify-between sticky top-0 h-15 px-5 lg:px-10 items-center bg-gray-800 drop-shadow-md/10 z-50 text-gray-400" id="header">
+                <h1><a href="/" class="text-gray-300 font-bold hover:text-orange-500 transition duration-300">Sanat Teorisi</a></h1>
+
+                <div class="flex-1 group max-w-50 mx-auto py-3 ml-5 lg:ml-10 hover:text-orange-500 lg:hover:bg-white transition duration-300">
+                    <ul class="uppercase font-semibold">
+                        <li>
+                            <input type="checkbox" class="hidden peer" id="mobile-menu">
+                            <label class="block lg:hidden cursor-pointer" for="mobile-menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 mx-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            </label>
+                            <span class="hidden lg:flex hover:peer-checked:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>Kategoriler
+                            </span>
+
+                            <ul class="hidden peer-checked:block lg:group-hover:block absolute w-50 pt-4 bg-white text-gray-600 font-semibold">
+                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Galeri</a></li>
+                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Makale</a></li>
+                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Şiir</a></li>
+                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Sözlük</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex group justify-end py-3">
                     <a href="javascript:;" class="pr-2 text-sm text-[#06ff00] hover:underline">Yeni Üyelik</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                     </svg>
                     <a href="javascript:;" class="text-sm hover:underline">Login</a>
                 </div>
-
-                <div class="flex md:hidden self-center justify-end" id="mobile-menu">
-                    <div class="relative inline-block">
-                        <input type="checkbox" class="hidden peer" id="menu-toggle">
-                        <label for="menu-toggle" class="cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </label>
-                        <div class="hidden peer-checked:block absolute mt-5 -ml-14 left-1/2 -translate-x-1/2 w-40 shadow-lg z-9 bg-black" id="dropdown">
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Galeri</a>
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Makale</a>
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Şiir</a>
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sözlük</a>
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Sign up</a>
-                            <a href="javascript:;" class="block p-2 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Login</a>
-                        </div>
-                    </div>
-                </div>
-                <!--
-                <div class="flex group relative justify-end">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <div class="hidden group-hover:block absolute bg-black w-auto">
-                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">Admission Process</div>
-                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">option 1</div>
-                        <div class="p-3 hover:bg-gray-800 hover:text-orange-500 transition duration-300">option 2</div>
-                    </div>
-                </div>
-                -->
             </header>
 
             <section class="grid grid-cols-1 px-5 lg:px-10 bg-gray-400" id="hero">
                 <div class="h-100">
                     <h2>Hero Section</h2>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-2 px-5 lg:px-10 py-2 bg-gray-400" id="popular-content">
+                <div class="text-gray-600">
+                    <div class="rounded-lg p-5 h-50 bg-gray-500">1</div>
+                    <div class="grid grid-cols-2 py-2 gap-1">
+                        <div class="rounded-lg p-5 h-50 bg-white">1-1</div>
+                        <div class="rounded-lg p-5 h-50 bg-white">1-2</div>
+                    </div>
+                </div>
+                <div class="text-gray-600">
+                    <div class="rounded-lg p-5 h-50 bg-white">2</div>
+                    <div class="grid grid-cols-2 py-2 gap-1">
+                        <div class="rounded-lg p-5 h-50 bg-white">2-1</div>
+                        <div class="rounded-lg p-5 h-50 bg-white">2-2</div>
+                    </div>
+                </div>
+                <div class="text-gray-600">
+                    <div class="rounded-lg p-5 h-50 bg-gray-500">3</div>
+                    <div class="grid grid-cols-2 py-2 gap-1">
+                        <div class="rounded-lg p-5 h-50 bg-white">3-1</div>
+                        <div class="rounded-lg p-5 h-50 bg-white">3-2</div>
+                    </div>
                 </div>
             </section>
 
