@@ -1,0 +1,7 @@
+.testCard3 {
+    height: 50px;
+    background-color: var(--color-blue-400);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+}
