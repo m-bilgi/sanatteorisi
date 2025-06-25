@@ -26,3 +26,4 @@
     .testCard {background-color: var(--color-red-700);
     }
 }
+@custom-variant dark (&:where(.dark, .dark *));
