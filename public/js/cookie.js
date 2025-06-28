@@ -12,11 +12,11 @@
 */
 function setCookie(name, value) {
 	const DATE = new Date();
-    const DAY = 1;
+	const DAY = 1;
 	DATE.setTime(DATE.getTime() + (DAY*24*60*60*1000));
-    let expiresDate = 'expires=' + DATE.toUTCString();
+	let expiresDate = 'expires=' + DATE.toUTCString();
 
-    document.cookie = name + '=' + value + ';' + expiresDate + ';path=/;samesite=lax';
+	document.cookie = name + '=' + value + ';' + expiresDate + ';path=/;samesite=lax';
 }
 
 /**
@@ -63,31 +63,31 @@ function setCookieSubKey(name, key, value) {
 	let keyValue = getCookieSubKey(name, key);
 	let newValue = cookieValue.trim();
 
-    // cookie key never exist
-    if (keyValue == '') {
+	// cookie key never exist
+	if (keyValue == '') {
 		newValue += '&' + key + '=' + value;
 	} else {
-        // Check if at first location. no beginning with &
+		// Check if at first location. no beginning with &
 		if (newValue.substring(0, key.length + 1) == (key + '=')) {
 			let totalKeyLength = key.length + 1 + getCookieSubKey(name, key).length + 1;
 			newValue = newValue.substring(totalKeyLength);
 
-            if (newValue.trim() == '') {
+			if (newValue.trim() == '') {
 				newValue = key + '=' + value;
 			} else {
 				newValue += '&' + key + '=' + value;
-            }
+			}
 		} else {
 			let fullKey = '&' + key + '=' + keyValue;
 
-            // cookie key inside the cookie value
+			// cookie key inside the cookie value
 			if (newValue.indexOf(fullKey) != -1) {
 				newValue = replaceAll(newValue, fullKey, '');
 				if (newValue.trim() == '') {
 					newValue = key + '=' + value;
 				} else {
 					newValue += '&' + key + '=' + value;
-                }
+				}
 			}
 		}
 	}
@@ -106,15 +106,15 @@ function setCookieSubKey(name, key, value) {
 function getCookieSubKey(name, key) {
 	let cookieValue = getCookie(name);
 	if (cookieValue == '') {
-        return '';
-    }
+		return '';
+	}
 
 	let valueSeparator = cookieValue.split('&');
 	for (let i = 0; i < valueSeparator.length; i++) {
 		let cookieKeyValue = valueSeparator[i].split('=');
 
-        // it has multi valued cookie
-        if (cookieKeyValue.length > 1) {
+		// it has multi valued cookie
+		if (cookieKeyValue.length > 1) {
 			if (cookieKeyValue[0] == key)
 				return cookieKeyValue[1].toString();
 		} else {
