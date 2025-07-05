@@ -14,7 +14,9 @@
 }
 @layer base {
     html {@apply scroll-smooth;}
-    /*body {@apply bg-linear-to-b from-gray-700 from-20% to-white to-80%;}*/
+    body {@apply bg-gray-100 dark:bg-gray-900;}
+    header {@apply flex justify-between sticky top-0 z-50 h-16 px-5 lg:px-10 items-center bg-gray-800 dark:bg-black drop-shadow-md text-gray-400;}
+    footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-gray-950 text-gray-500 text-right text-sm;}
     h1 {@apply text-2xl lg:text-3xl font-medium;}
     h2 {@apply text-xl lg:text-2xl font-bold;}
     h3 {@apply md:text-lg lg:text-xl font-bold;}
@@ -23,7 +25,6 @@
     h6 {@apply font-bold;}
 }
 @layer components {
-    .testCard {background-color: var(--color-red-700);
-    }
+    .testCard {background-color: var(--color-red-700);}
 }
 @custom-variant dark (&:where(.dark, .dark *));
