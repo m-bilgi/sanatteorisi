@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startAutoSlide() {
-        stopAutoSlide(); // önce varsa temizle
+        stopAutoSlide(); // If it already exists, clear it.
         interval = setInterval(() => {
         let nextIndex = (currentIndex + 1) % TOTAL_SLIDES;
             goToSlide(nextIndex);
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     SLIDER.addEventListener('mouseenter', stopAutoSlide);
     SLIDER.addEventListener('mouseleave', startAutoSlide);
 
-    // Başlat
+    // Start
     goToSlide(0);
     startAutoSlide();
 });
