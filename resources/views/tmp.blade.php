@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="tr">
     <head>
         <meta charset="UTF-8">
@@ -17,8 +16,8 @@
                 @layer base {
                     html {@apply scroll-smooth;}
                     body {@apply bg-gray-100 dark:bg-gray-900;}
-                    header {@apply flex justify-between sticky top-0 z-50 h-15 px-5 lg:px-10 items-center bg-gray-800 dark:bg-black drop-shadow-md/10 text-gray-400;}
-                    footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-black text-gray-500 text-right text-sm;}
+                    header {@apply flex justify-between sticky top-0 z-50 h-16 px-5 lg:px-10 items-center bg-gray-800 dark:bg-black drop-shadow-md text-gray-400;}
+                    footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-gray-950 text-gray-500 text-right text-sm;}
                     h1 {@apply text-2xl lg:text-3xl font-medium;}
                     h2 {@apply text-xl lg:text-2xl font-bold;}
                     h3 {@apply md:text-lg lg:text-xl font-bold;}
@@ -27,7 +26,7 @@
                     h6 {@apply font-bold;}
                 }
                 @layer components {
-                    .acvite {background-color: var(--color-red-500);}
+                    .testCard {background-color: var(--color-red-700);}
                 }
             </style>
         @endif
@@ -66,18 +65,18 @@
                 </div>
 
                 <div class="flex justify-end w-20 py-3 space-x-1">
-                    <a href="javascript:;" onclick="toggleDarkLightMode();return false;" title="dark/light mode" id="dark-light-mode">
+                    <a href="javascript:;" title="dark/light mode" id="dark-light-mode">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                             <path class="block dark:hidden" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                         </svg>
                     </a>
-                    <a href="javascript:;" class="text-sm text-[#06ff00] hover:underline">
+                    <a href="javascript:;" class="text-sm text-[#06ff00] hover:underline" id="cc">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                         </svg>
                     </a>
-                    <a href="javascript:;" class="text-sm hover:underline">
+                    <a href="javascript:;" onclick="getModal('login-modal');return false;" class="text-sm hover:underline">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                         </svg>
@@ -88,34 +87,154 @@
             <main id="main">
                 <section class="grid px-5 lg:px-10 bg-gray-400 dark:bg-gray-800 dark:text-gray-400" id="hero">
                     <h2>Hero Section</h2>
-                    <div class="w-full my-12 mx-auto overflow-hidden box-border block relative" id="slider">{{-- slider-container --}}
-                        <div class="flex transition transform duration-500" id="sliderTrack">{{-- slider-track --}}
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=1" class="w-full rounded-lg block" alt=""></div>{{-- slider-item --}}
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=2" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=3" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=4" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=5" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=6" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=7" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=8" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=9" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=10" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=11" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=12" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=13" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=14" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=15" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=16" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=17" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=18" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=19" class="w-full rounded-lg block" alt=""></div>
-                            <div class="shrink-0 basis-full md:basis-1/5 px-2"><img src="https://picsum.photos/200/150?random=20" class="w-full rounded-lg block" alt=""></div>
+                    <div class="w-full my-12 mx-auto overflow-hidden box-border block relative" id="slider">
+                        <div class="flex text-white transition duration-500" id="sliderTrack">
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=1" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=2" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=3" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=4" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=5" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=6" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=7" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=8" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=9" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=10" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=11" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=12" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=13" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=14" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=15" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=16" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=17" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=18" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=19" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
+                                <img src="https://picsum.photos/200/150?random=20" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                    <h4>Title</h4>
+                                    <p>Description</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center mt-2.5" id="navButtons">{{-- nav-buttons --}}
-                            <button data-index="0" class="h-1 py-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="1" class="h-1 py-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="2" class="h-1 py-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="3" class="h-1 py-1 px-4 cursor-pointer bg-gray-500"></button>
+                        <div class="text-center mt-2" id="navButtons">
+                            <button data-index="0" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
+                            <button data-index="1" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
+                            <button data-index="2" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
+                            <button data-index="3" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
                         </div>
                     </div>
                 </section>
@@ -173,31 +292,63 @@
                     </div>
                 </section>
 
-                <section class="bg-gray-200 dark:bg-gray-600" id="gallery-top-8">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-5 lg:px-10 py-5" id="gallery">
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600" id="gallery-top-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=21" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=22" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=23" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=24" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=25" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>2Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=26" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=27" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="https://images.unsplash.com/photo-1526400473556-aac12354f3db" alt=".">
+                        <div class="relative group">
+                            <img src="https://picsum.photos/200/150?random=28" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
+                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                                <h4>Title</h4>
+                                <p>Description</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -257,7 +408,7 @@
                 </section>
 
                 <section class="px-5 lg:px-10 py-5 space-y-1 bg-white dark:bg-gray-700" id="expand-collapse">
-                    <details onclick="toggleExpandCollapse('home1');" class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home1">
+                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home1">
                         <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
                             <h3>Haftanın Yazısı: Dada Manifestosu</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
@@ -271,7 +422,7 @@
                         </div>
                     </details>
 
-                    <details onclick="toggleExpandCollapse('home2');" class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home2">
+                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home2">
                         <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
                             <h3>Haftanın Şiiri: Daha Ne Zaman</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
@@ -364,7 +515,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-950 dark:text-gray-500" id="bottom-down">
+                    <div class="flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-900 dark:text-gray-500" id="bottom-down">
                         <div class="text-sm">
                             <h6>Proje ve Referanslar</h6>
                             <nav>
@@ -401,6 +552,16 @@
                 <p>© 2003-2024 <span style="color: #1efe00;">SanatTeorisi</span>. Görsel yayınların tüm hakları ve sorumluluğu eser sahiplerine aittir.</p>
             </footer>
         </div>
+        <div class="flex justify-center items-center fixed inset-0 bg-gray-900/80 backdrop-blur-md transition-opacity invisible" id="login-modal">
+            <div class="min-w-[500px] max-w-full p-10 rounded-lg bg-white dark:bg-gray-700">
+                <h2>Test Modal</h2>
+                <a href="javascript:;" onclick="getModal('login-modal');return false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </a>
+            </div>
+        </div> 
     </body>
 </html>
 <!--
