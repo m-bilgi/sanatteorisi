@@ -11,10 +11,10 @@
 * @param {string} value cookie value
 */
 function setCookie(name, value) {
-	const DATE = new Date();
-	const DAY = 1;
-	DATE.setTime(DATE.getTime() + (DAY*24*60*60*1000));
-	let expiresDate = 'expires=' + DATE.toUTCString();
+	const date = new Date();
+	const day = 1;
+	date.setTime(date.getTime() + (day*24*60*60*1000));
+	let expiresDate = 'expires=' + date.toUTCString();
 
 	document.cookie = name + '=' + value + ';' + expiresDate + ';path=/;samesite=lax';
 }
