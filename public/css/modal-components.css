@@ -1,0 +1,4 @@
+@layer components {
+    .st-modal {@apply flex justify-center items-center fixed inset-0 bg-gray-900/80 backdrop-blur-md transition-opacity;}
+    .st-modal-content {@apply grid grid-cols-2 gap-4 min-w-[350px] md:min-w-[500px] max-w-full px-10 py-5 rounded-lg bg-white dark:bg-gray-700;}
+}
