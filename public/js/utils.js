@@ -1,16 +1,12 @@
 window.addEventListener("DOMContentLoaded", () => {
 	loadDarkLightMode();
-
-	const STORAGE_KEY = getExpandCollapseLocalStorage('detailsState');
-	document.addEventListener('click', function(event) {
-		toggleExpandCollapse(event, 'detailsState', STORAGE_KEY);
-	});
+	toggleExpandCollapse();
+	togglePassword();
 });
 
 /**
 * Switch Dark/Light Mode Function
 * -
-* ---
 * Save as localStorage
 */
 function toggleDarkLightMode() {
@@ -29,77 +25,78 @@ function toggleDarkLightMode() {
 /**
 * Load Dark/Light Mode Function
 * -
-* ---
 * Check and apply dark/light mode.
 */
 function loadDarkLightMode() {
-	const IS_DARK_MODE = localStorage.getItem('darkMode');
-	if (IS_DARK_MODE === 'true') {
+	const isDarkMode = localStorage.getItem('darkMode');
+	if (isDarkMode === 'true') {
 		document.body.classList.add('dark');
 	}
 
-	document.getElementById("dark-light-mode").onclick = function() {
+	document.getElementById('dark-light-mode').onclick = () => {
 		toggleDarkLightMode();
-		return false;
 	};
-}
-
-/**
-* getExpandCollapseLocalStorage Function
-* -
-* ---
-* Read localStorage data and return it as a json object.
-*
-* ---
-* @param {string} storageKey localStorage 'Key'
-* @return {object} localStorage obj
-*/
-function getExpandCollapseLocalStorage(storageKey) {
-	const SAVED_STATE = JSON.parse(localStorage.getItem(storageKey) || '{}');
-
-	Object.entries(SAVED_STATE).forEach(([id, state]) => {
-        const detailElement = document.getElementById(id);
-        if (detailElement) {
-            if (state === 'open') {
-                detailElement.setAttribute('open', '');
-            } else {
-                detailElement.removeAttribute('open');
-            }
-        }
-    });
-	return SAVED_STATE;
 }
 
 /**
 * Expand/Collapse Function
 * -
-* ---
-* @param {string} event EventListener 'click'
-* @param {string} storageKey localStorage 'Key'
-* @param {object} savedState localStorage obj
+* Save as localStorage
 */
-function toggleExpandCollapse(event, storageKey, savedState) {
-	if (event.target.tagName === 'SUMMARY') {
-		const parentDetails = event.target.closest('details');
+function toggleExpandCollapse() {
+	const storageKey = 'detailsState';
+	const savedState = JSON.parse(localStorage.getItem(storageKey) || '{}');
 
-		if (parentDetails && parentDetails.id) {
-			const detailId = parentDetails.id;
-			const isOpen = parentDetails.hasAttribute('open');
-
-			// Reverse the situation and save
-			savedState[detailId] = isOpen ? 'close' : 'open';
-			localStorage.setItem(storageKey, JSON.stringify(savedState));
+	// 1. Get localStorage object
+	Object.entries(savedState).forEach(([id, state]) => {
+		const elementId = document.getElementById(id);
+		if (elementId) {
+			if (state === 'open') {
+				elementId.setAttribute('open', '');
+			} else {
+				elementId.removeAttribute('open');
+			}
 		}
-	}
+	});
+
+	// 2. Toggle action & update localStorage
+	document.querySelectorAll('[data-name="open-close"]').forEach(detail => {
+		detail.addEventListener('toggle', function() {
+			const detailId = this.id;
+			const isOpen = this.hasAttribute('open');
+
+			savedState[detailId] = isOpen ? 'open' : 'close';
+			localStorage.setItem(storageKey, JSON.stringify(savedState));
+		});
+	});
 }
 
 /**
-* Modal Function
+* Toggle Password Function
 * -
-* ---
-* @param {string} id modal element id.
+* Ability to 'show/hide' password in form fields.
 */
-function getModal(id) {
-	document.body.classList.toggle('overflow-hidden');
-	document.getElementById(id).classList.toggle('invisible');
+function togglePassword() {
+	document.addEventListener('click', function(event) {
+		const toggleElement = event.target.closest('[data-name="toogle-password"]');
+
+		if (toggleElement) {
+			const inputId = toggleElement.dataset.id;
+			const passwordInput = document.getElementById(inputId);
+			const eyeOpenIcon = toggleElement.querySelector('#eye-open');
+			const eyeCloseIcon = toggleElement.querySelector('#eye-close');
+
+			if (passwordInput && eyeOpenIcon && eyeCloseIcon) {
+				if (passwordInput.type === 'password') {
+					passwordInput.type = 'text';
+					eyeOpenIcon.classList.add('hidden');
+					eyeCloseIcon.classList.remove('hidden');
+				} else {
+					passwordInput.type = 'password';
+					eyeOpenIcon.classList.remove('hidden');
+					eyeCloseIcon.classList.add('hidden');
+				}
+			}
+		}
+	});
 }
