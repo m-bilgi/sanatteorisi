@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="tr">
     <head>
         <meta charset="UTF-8">
@@ -16,8 +17,6 @@
                 @layer base {
                     html {@apply scroll-smooth;}
                     body {@apply bg-gray-100 dark:bg-gray-900;}
-                    header {@apply flex justify-between sticky top-0 z-50 h-16 px-5 lg:px-10 items-center bg-gray-800 dark:bg-black drop-shadow-md text-gray-400;}
-                    footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-gray-950 text-gray-500 text-right text-sm;}
                     h1 {@apply text-2xl lg:text-3xl font-medium;}
                     h2 {@apply text-xl lg:text-2xl font-bold;}
                     h3 {@apply md:text-lg lg:text-xl font-bold;}
@@ -28,18 +27,20 @@
                 @layer components {
                     .testCard {background-color: var(--color-red-700);}
                 }
+                @custom-variant dark (&:where(.dark, .dark *));
             </style>
         @endif
         <script src="js/utils.js"></script>
         <script src="js/cookie.js"></script>
         <script src="js/slider.js"></script>
+        <script src="js/modal.js"></script>
     </head>
     <body class="light" id="body">
-        <div class="3xl:w-[1905px] justify-self-center" id="container">
-            <header id="header">
-                <h1><a href="/" class="text-gray-300 font-bold hover:text-orange-500 transition duration-300">Sanat Teorisi</a></h1>
+        <div class="st-container" id="container">
+            <header class="st-header" id="header">
+                <h1><a href="/" class="st-header-logo">Sanat Teorisi</a></h1>
 
-                <div class="flex-1 group max-w-50 mx-auto py-3 ml-2 lg:ml-10 hover:text-orange-500 lg:hover:bg-white transition duration-300 dark:hover:dark:bg-gray-700">
+                <div class="st-header-center group">
                     <ul class="uppercase font-semibold">
                         <li>
                             <input type="checkbox" class="hidden peer" id="mobile-menu">
@@ -53,30 +54,29 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                                 </svg>Kategoriler
                             </span>
-
-                            <ul class="hidden peer-checked:block lg:group-hover:block absolute w-50 pt-4 bg-white text-gray-600 font-semibold dark:bg-gray-700 dark:text-gray-300">
-                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Galeri</a></li>
-                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Makale</a></li>
-                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Şiir</a></li>
-                                <li class="pl-4 py-2 hover:bg-gray-300 hover:text-orange-500 transition duration-300"><a href="javascript:;">Sözlük</a></li>
+                            <ul class="st-header-nav peer-checked:block">
+                                <li class="st-header-nav-llink"><a href="javascript:;">Galeri</a></li>
+                                <li class="st-header-nav-llink"><a href="javascript:;">Makale</a></li>
+                                <li class="st-header-nav-llink"><a href="javascript:;">Şiir</a></li>
+                                <li class="st-header-nav-llink"><a href="javascript:;">Sözlük</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
 
-                <div class="flex justify-end w-20 py-3 space-x-1">
+                <div class="st-header-right">
                     <a href="javascript:;" title="dark/light mode" id="dark-light-mode">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                             <path class="block dark:hidden" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                         </svg>
                     </a>
-                    <a href="javascript:;" class="text-sm text-[#06ff00] hover:underline" id="cc">
+                    <a href="javascript:;" class="text-[#06ff00]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                         </svg>
                     </a>
-                    <a href="javascript:;" onclick="getModal('login-modal');return false;" class="text-sm hover:underline">
+                    <a href="javascript:;" data-name="modal" id="login">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                         </svg>
@@ -87,154 +87,154 @@
             <main id="main">
                 <section class="grid px-5 lg:px-10 bg-gray-400 dark:bg-gray-800 dark:text-gray-400" id="hero">
                     <h2>Hero Section</h2>
-                    <div class="w-full my-12 mx-auto overflow-hidden box-border block relative" id="slider">
-                        <div class="flex text-white transition duration-500" id="sliderTrack">
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=1" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                    <div class="st-slider" id="slider">
+                        <div class="st-slider-track" id="sliderTrack">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=1" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=2" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=2" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=3" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=3" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=4" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=4" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=5" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=5" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=6" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=6" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=7" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=7" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=8" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=8" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=9" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=9" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=10" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=10" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=11" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=11" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=12" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=12" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=13" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=13" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=14" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=14" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=15" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=15" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=16" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=16" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=17" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=17" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=18" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=18" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=19" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=19" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
-                            <div class="shrink-0 basis-full sm:basis-2/4 md:basis-2/6 lg:basis-1/4 xl:basis-1/5 px-2 group">
-                                <img src="https://picsum.photos/200/150?random=20" alt="" class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                                <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <div class="st-slider-group group">
+                                <img src="https://picsum.photos/200/150?random=20" alt="" class="st-slider-img">
+                                <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-2" id="navButtons">
-                            <button data-index="0" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="1" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="2" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
-                            <button data-index="3" class="h-1 px-4 cursor-pointer bg-gray-500"></button>
+                        <div class="st-slider-nav" id="navButtons">
+                            <button data-index="0" class="st-slider-nav-item"></button>
+                            <button data-index="1" class="st-slider-nav-item"></button>
+                            <button data-index="2" class="st-slider-nav-item"></button>
+                            <button data-index="3" class="st-slider-nav-item"></button>
                         </div>
                     </div>
                 </section>
@@ -244,23 +244,23 @@
                         <div class="p-5 lg:p-10 bg-gray-50 text-gray-600 dark:bg-gray-600/50 dark:text-gray-300" id="best-articles">
                             <h2><span class="p-3">EN İYİ MAKALELER</span></h2>
                             <p class="p-3 mb-2 border-b border-gray-400 dark:border-gray-800">Makaleler bölümündeki en iyi 5 içerik.</p>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-700">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Eser Analiz Yöntemleri</a></h4>
                                 <p>Sanat olgusunun varlığını kavramanın en doğru yolu, sanat eserini çözümlemekte yatmaktadır. Bu konuy...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-700">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Türk Resminde Kurtuluş Savaşı Teması</a></h4>
                                 <p>Sanatın toplumsal yapılara, bağlı gelişmesiyle, sanatçının yaratımını politik, ekonomik, kültürel şa...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-700">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Altın Oran</a></h4>
                                 <p>“Altın oran kavramı ve bu kavramın gizemi nedir?” diye düşündüğünüz olmuştur. Belki de bu kavramı il...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-700">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sokrates ve Felsefesi</a></h4>
                                 <p>M.Ö. 469-399 yılları arasında yaşamış olan ünlü Yunanlı düşünür. Platon’un hocası olan Sokrates, yaz...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-700">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Modernizm ve Sanat Akımlarından Notlar</a></h4>
                                 <p>1750’lerden 1890’lara kadar süren ilk sanayi devrimi ardından, 2. Sanayi Devri 1896’larda başlayıp 1...</p>
                             </article>
@@ -268,23 +268,23 @@
                         <div class="p-5 lg:p-10 text-gray-600 dark:text-gray-300" id="last-articles">
                             <h2><span class="p-3">SON 5 MAKALE</span></h2>
                             <p class="p-3 mb-2 border-b border-gray-400 dark:border-gray-800">Makaleler bölümündeki son 5 içerik.</p>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-800">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-800">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sürreal Resimde Kadın İmgesi</a></h4>
                                 <p>Sürrealizm, sanat ve yaşam alanında radikal başkaldırı ve kural tanımaz tavrın 20 yüz yılın ilk çeyr...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-800">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-800">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Büyük Masturbator</a></h4>
                                 <p>Büyük Masturbator, Salvador Dalinin ikonik bir eseri ve ressamın sürrealist dönemine ait olarak kabu...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-800">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-800">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Ölümün Kitsch Bir İmge Örneği Olarak Günümüz İran’ında Üretilen Mezar Taşları</a></h4>
                                 <p>Farklı çağlarda ölümle ilgili üretilen imgeler, metafiziğe nasıl bakıldığını dışa vurmaktadır. Kitsc...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-800">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-800">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Sanatta Bedenin Uyku Hali</a></h4>
                                 <p>Beden, canlının maddesel kanıtıdır. Bedeni betimlemek çağlar boyunca sanatın en önemli sorunsalların...</p>
                             </article>
-                            <article class="block p-3 rounded-xl hover:bg-gray-200 transition duration-300 dark:hover:bg-gray-800">
+                            <article class="block p-3 rounded-xl transition duration-30 hover:bg-gray-200 dark:hover:bg-gray-800">
                                 <h4><a href="javascript:;" class="text-orange-500 hover:underline">Orhan Pamuk’un Beyaz Kale Romanında Ayna Oyunları</a></h4>
                                 <p>Genelde ayna varlıkların görüntüsünü yansıtan ya da süs olarak kullanılan eşyalardan biri olarak düş...</p>
                             </article>
@@ -292,7 +292,7 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600" id="gallery-top-8">
+                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600;" id="gallery-top-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
                         <div class="relative group">
                             <img src="https://picsum.photos/200/150?random=21" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
@@ -408,7 +408,7 @@
                 </section>
 
                 <section class="px-5 lg:px-10 py-5 space-y-1 bg-white dark:bg-gray-700" id="expand-collapse">
-                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home1">
+                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" data-name="open-close" id="home1">
                         <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
                             <h3>Haftanın Yazısı: Dada Manifestosu</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
@@ -422,7 +422,7 @@
                         </div>
                     </details>
 
-                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" id="home2">
+                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" data-name="open-close" id="home2">
                         <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
                             <h3>Haftanın Şiiri: Daha Ne Zaman</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
@@ -459,9 +459,9 @@
                     </details>
                 </section>
 
-                <section class="bg-gray-300 text-gray-700 dark:bg-gray-800 dark:text-gray-500" id="bottom">
-                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 p-5 pb-1 lg:px-10" id="bottom-up">
-                        <div class="hidden lg:block w-10 -rotate-180 font-black text-4xl text-gray-400 select-none" style="writing-mode:vertical-lr">Sanat Teorisi</div>
+                <section class="st-bottom" id="bottom">
+                    <div class="st-bottom-up" id="bottom-up">
+                        <div class="st-bottom-logo">Sanat Teorisi</div>
                         <div class="px-5 text-sm">
                             <h5>Makaleler</h5>
                             <nav>
@@ -504,7 +504,7 @@
                                 <a href="javascript:;" class="block hover:underline">Yeni Üyelik</a>
                             </nav>
                         </div>
-                        <div class="col-2 col-start-2 lg:col-5 lg:col-start-5 flex justify-end">
+                        <div class="st-bottom-right">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                             </svg>
@@ -515,7 +515,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-900 dark:text-gray-500" id="bottom-down">
+                    <div class="st-bottom-down" id="bottom-down">
                         <div class="text-sm">
                             <h6>Proje ve Referanslar</h6>
                             <nav>
@@ -547,21 +547,58 @@
                 </section>
             </main>
 
-            <footer id="footer">
+            <footer class="st-footer" id="footer">
                 <p>Resimlerin izin alınmadan kopyalanması ve kullanılması <a href="javascript:;" class="text-gray-300 hover:underline">5846 sayılı fikir ve sanat eserleri kanunu</a>na göre suçtur.</p>
                 <p>© 2003-2024 <span style="color: #1efe00;">SanatTeorisi</span>. Görsel yayınların tüm hakları ve sorumluluğu eser sahiplerine aittir.</p>
             </footer>
         </div>
-        <div class="flex justify-center items-center fixed inset-0 bg-gray-900/80 backdrop-blur-md transition-opacity invisible" id="login-modal">
-            <div class="min-w-[500px] max-w-full p-10 rounded-lg bg-white dark:bg-gray-700">
-                <h2>Test Modal</h2>
-                <a href="javascript:;" onclick="getModal('login-modal');return false;">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </a>
-            </div>
-        </div> 
+
+        <div class="st-modal invisible" id="login-modal">
+            <form name="loginForm" id="login-form">
+                <div class="st-modal-content" data-name="modal-content">
+                    <div class="dark:text-gray-200"><h2>Login</h2></div>
+                    <div class="flex justify-end dark:text-gray-200">
+                        <a href="javascript:;" data-name="close-modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="col-span-2 input-group py-3">
+                        <label class="input-group-text md:w-36" for="uName">Username</label>
+                        <input type="text" name="uName" id="uName" autocomplete="off" minlength="5" maxlength="25" placeholder="username" class="form-control w-20 md:w-auto" />
+                    </div>
+
+                    <div class="col-span-2 input-group py-3">
+                        <label class="input-group-text md:w-36" for="uPass">Password</label>
+                        <input type="password" name="uPass" id="uPass" autocomplete="off" minlength="5" maxlength="25" placeholder="password" class="form-control w-20 md:w-auto" />
+                        <span class="input-group-text" data-name="toogle-password" data-id="uPass">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path id="eye-open" class="" stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path id="eye-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="col-span-2 text-sm dark:text-gray-200">
+                        <input type="checkbox" name="rememberMe" id="remember-me" checked /><label class="px-2" for="remember-me">Beni Hatırla</label>
+                    </div>
+
+                    <div class="col-span-2 flex justify-end text-sm">
+                        <span class="py-2 px-5 dark:text-gray-200">
+                            <a href="javascript:;" class="px-1 hover:underline">Yeni Üyelik</a> | <a href="javascript:;" class="px-1 hover:underline">Şifremi unuttum</a>
+                        </span>
+                        <button class="button button-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                            </svg>
+                            <span class="hidden md:block">Giriş yap</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
 <!--
