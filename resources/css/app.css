@@ -2,7 +2,7 @@
 @import '../../public/css/style.css';
 @import '../../public/css/form-components.css';
 @import '../../public/css/slider-components.css';
-@import '../../public/css/modal-components.css';
+@import '../../public/css/slider-components.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -24,8 +24,5 @@
     h4 {@apply font-medium;}
     h5 {@apply lg:text-lg font-bold;}
     h6 {@apply font-bold;}
-}
-@layer components {
-    .testCard {background-color: var(--color-red-700);}
 }
 @custom-variant dark (&:where(.dark, .dark *));
