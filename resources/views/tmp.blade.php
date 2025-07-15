@@ -64,7 +64,7 @@
             </header>
 
             <main id="main">
-                <section class="grid px-5 lg:px-10 bg-gray-400 dark:bg-gray-800 dark:text-gray-400" id="hero">
+                <section class="st-hero" id="hero">
                     <h2>Hero Section</h2>
                     <div class="st-slider" id="slider">
                         <div class="st-slider-track" id="sliderTrack">
@@ -271,60 +271,60 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600" id="gallery-top-8">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
+                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600" id="gallery-contents">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="gallery-top-8">
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=21" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=21" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=22" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=22" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=23" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=23" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=24" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=24" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=25" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=25" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>2Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=26" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=26" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=27" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=27" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
                         </div>
                         <div class="relative group">
-                            <img src="https://picsum.photos/200/150?random=28" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
-                            <div class="bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute">
+                            <img src="https://picsum.photos/200/150?random=28" alt="." class="st-gallery-img">
+                            <div class="st-gallery-img-text">
                                 <h4>Title</h4>
                                 <p>Description</p>
                             </div>
@@ -332,14 +332,14 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-2 bg-white text-gray-600 dark:bg-gray-700 dark:text-gray-300" id="popular-content">
+                <section class="px-5 lg:px-10 py-2 bg-white text-gray-600 dark:bg-gray-700 dark:text-gray-300" id="popular-contents">
                     <div class="block py-5 border-b border-gray-300 dark:border-gray-600">
                         <h2>POPÜLER KATEGORİLER</h2>
                         <p>Tüm kategoriler, tüm eserler.</p>
                     </div>
                     <div class="block md:flex justify-between py-5">
                         <div id="popular-gallery">
-                            <h3><a href="javascript:;" class="hover:underline">GALERİ KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="st-link-hover-orange">GALERİ KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Yeşilçam</a>
                                 <a href="javascript:;" class="block hover:underline">Müzisyenler</a>
@@ -354,7 +354,7 @@
                             </nav>
                         </div>
                         <div id="popular-articles">
-                            <h3><a href="javascript:;" class="hover:underline">MAKALE KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="hover:text-orange-500 transition duration-300">MAKALE KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Makaleler</a>
                                 <a href="javascript:;" class="block hover:underline">Felsefe</a>
@@ -369,7 +369,7 @@
                             </nav>
                         </div>
                         <div id="popular-poems">
-                            <h3><a href="javascript:;" class="hover:underline">ŞİİR KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="hover:text-orange-500 transition duration-300">ŞİİR KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Necip Fazıl Kısakürek</a>
                                 <a href="javascript:;" class="block hover:underline">Edip Cansever</a>
@@ -387,8 +387,8 @@
                 </section>
 
                 <section class="px-5 lg:px-10 py-5 space-y-1 bg-white dark:bg-gray-700" id="expand-collapse">
-                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" data-name="open-close" id="home1">
-                        <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
+                    <details class="st-details group" data-name="open-close" id="home1">
+                        <summary class="st-summary">
                             <h3>Haftanın Yazısı: Dada Manifestosu</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -401,8 +401,8 @@
                         </div>
                     </details>
 
-                    <details class="group px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400" data-name="open-close" id="home2">
-                        <summary class="flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300">
+                    <details class="st-details group" data-name="open-close" id="home2">
+                        <summary class="st-summary">
                             <h3>Haftanın Şiiri: Daha Ne Zaman</h3>
                             <svg viewBox="0 0 20 20" fill="currentColor" class="size-6 transform transition-transform duration-200 group-open:rotate-180">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -528,7 +528,7 @@
 
             <footer class="st-footer" id="footer">
                 <p>Resimlerin izin alınmadan kopyalanması ve kullanılması <a href="javascript:;" class="text-gray-300 hover:underline">5846 sayılı fikir ve sanat eserleri kanunu</a>na göre suçtur.</p>
-                <p>© 2003-2024 <span style="color: #1efe00;">SanatTeorisi</span>. Görsel yayınların tüm hakları ve sorumluluğu eser sahiplerine aittir.</p>
+                <p>© 2003-2024 <span class="text-[#06ff00]">SanatTeorisi</span>. Görsel yayınların tüm hakları ve sorumluluğu eser sahiplerine aittir.</p>
             </footer>
         </div>
 
