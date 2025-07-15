@@ -10,8 +10,6 @@
     .st-bottom-up {@apply grid grid-cols-2 lg:grid-cols-5 gap-4 p-5 pb-1 lg:px-10;}
     .st-bottom-logo {@apply hidden lg:block w-10 -rotate-180 font-black text-4xl text-gray-400 select-none; writing-mode:vertical-lr;}
     .st-bottom-right {@apply col-2 col-start-2 lg:col-5 lg:col-start-5 flex justify-end;}
-    .st-bottom-down {@apply flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-900 dark:text-gray-500;}
+    .st-bottom-down {@apply flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-900/50 dark:text-gray-500;}
     .st-footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-gray-950 text-gray-500 text-right text-sm;}
 }
-/* test class */
-.testCard {background-color: var(--color-red-700);}
