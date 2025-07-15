@@ -12,4 +12,11 @@
     .st-bottom-right {@apply col-2 col-start-2 lg:col-5 lg:col-start-5 flex justify-end;}
     .st-bottom-down {@apply flex justify-end space-x-8 p-5 lg:px-10 bg-gray-400 text-gray-700 dark:bg-gray-900/50 dark:text-gray-500;}
     .st-footer {@apply p-5 lg:p-10 bg-gray-800 dark:bg-gray-950 text-gray-500 text-right text-sm;}
+    .st-details {@apply px-5 rounded-xl bg-gray-100 text-gray-600 hover:ring-1 hover:ring-gray-300 transition duration-300 dark:bg-gray-600 dark:text-gray-400;}
+    .st-summary {@apply flex justify-between py-5 select-none cursor-pointer hover:text-orange-500 focus:text-orange-500 transition duration-300;}
+
+    .st-hero {@apply grid px-5 lg:px-10 bg-gray-400 dark:bg-gray-800 dark:text-gray-400;}
+
+    .st-gallery-img {@apply w-full rounded-lg group-hover:brightness-50 m-auto;}
+    .st-gallery-img-text {@apply bottom-0 mx-2 opacity-0 group-hover:bottom-2 group-hover:opacity-100 duration-300 absolute;}
 }
