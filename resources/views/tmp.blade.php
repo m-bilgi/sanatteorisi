@@ -4,36 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sanat Teorisi</title>
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-            <style type="text/tailwindcss">
-                @theme {
-                  --breakpoint-3xl: 120rem; /* 1920px */
-                  --breakpoint-4xl: 160rem; /* 2560px */
-                  --breakpoint-5xl: 240rem; /* 3840px */
-                }
-                @layer base {
-                    html {@apply scroll-smooth;}
-                    body {@apply bg-gray-100 dark:bg-gray-900;}
-                    h1 {@apply text-2xl lg:text-3xl font-medium;}
-                    h2 {@apply text-xl lg:text-2xl font-bold;}
-                    h3 {@apply md:text-lg lg:text-xl font-bold;}
-                    h4 {@apply font-medium;}
-                    h5 {@apply lg:text-lg font-bold;}
-                    h6 {@apply font-bold;}
-                }
-                @layer components {
-                    .testCard {background-color: var(--color-red-700);}
-                }
-                @custom-variant dark (&:where(.dark, .dark *));
-            </style>
-        @endif
-        <script src="js/utils.js"></script>
-        <script src="js/cookie.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/modal.js"></script>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{ url('js/utils.js') }}"></script>
+        <script src="{{ url('js/cookie.js') }}"></script>
+        <script src="{{ url('js/slider.js') }}"></script>
+        <script src="{{ url('js/modal.js') }}"></script>
     </head>
     <body class="light" id="body">
         <div class="st-container" id="container">
@@ -54,11 +29,15 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                                 </svg>Kategoriler
                             </span>
+                            <!--
+                                TODO: 
+                                Menu açildiktan sonra farklı bir yere tıklanınca menunun kapanması sağlamak için 'group-focus-within:block' özelliği araştırılacak.
+                            -->
                             <ul class="st-header-nav peer-checked:block">
-                                <li class="st-header-nav-llink"><a href="javascript:;">Galeri</a></li>
-                                <li class="st-header-nav-llink"><a href="javascript:;">Makale</a></li>
-                                <li class="st-header-nav-llink"><a href="javascript:;">Şiir</a></li>
-                                <li class="st-header-nav-llink"><a href="javascript:;">Sözlük</a></li>
+                                <li class="st-header-nav-link"><a href="javascript:;">Galeri</a></li>
+                                <li class="st-header-nav-link"><a href="javascript:;">Makale</a></li>
+                                <li class="st-header-nav-link"><a href="javascript:;">Şiir</a></li>
+                                <li class="st-header-nav-link"><a href="javascript:;">Sözlük</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -292,7 +271,7 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600;" id="gallery-top-8">
+                <section class="px-5 lg:px-10 py-5 bg-gray-200 text-white dark:bg-gray-600" id="gallery-top-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
                         <div class="relative group">
                             <img src="https://picsum.photos/200/150?random=21" alt="." class="w-full rounded-lg group-hover:brightness-50 m-auto">
@@ -565,15 +544,15 @@
                         </a>
                     </div>
 
-                    <div class="col-span-2 input-group py-3">
-                        <label class="input-group-text md:w-36" for="uName">Username</label>
-                        <input type="text" name="uName" id="uName" autocomplete="off" minlength="5" maxlength="25" placeholder="username" class="form-control w-20 md:w-auto" />
+                    <div class="st-input-group col-span-2 py-3">
+                        <label class="st-input-group-text md:w-36" for="uName">Username</label>
+                        <input type="text" name="uName" id="uName" autocomplete="off" minlength="5" maxlength="25" placeholder="username" class="st-form-control w-20 md:w-auto" />
                     </div>
 
-                    <div class="col-span-2 input-group py-3">
-                        <label class="input-group-text md:w-36" for="uPass">Password</label>
-                        <input type="password" name="uPass" id="uPass" autocomplete="off" minlength="5" maxlength="25" placeholder="password" class="form-control w-20 md:w-auto" />
-                        <span class="input-group-text" data-name="toogle-password" data-id="uPass">
+                    <div class="st-input-group col-span-2 py-3">
+                        <label class="st-input-group-text md:w-36" for="uPass">Password</label>
+                        <input type="password" name="uPass" id="uPass" autocomplete="off" minlength="5" maxlength="25" placeholder="password" class="st-form-control w-20 md:w-auto" />
+                        <span class="st-input-group-text" data-name="toogle-password" data-id="uPass">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path id="eye-open" class="" stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                                 <path id="eye-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
@@ -589,7 +568,7 @@
                         <span class="py-2 px-5 dark:text-gray-200">
                             <a href="javascript:;" class="px-1 hover:underline">Yeni Üyelik</a> | <a href="javascript:;" class="px-1 hover:underline">Şifremi unuttum</a>
                         </span>
-                        <button class="button button-primary">
+                        <button class="st-button st-button-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                             </svg>
