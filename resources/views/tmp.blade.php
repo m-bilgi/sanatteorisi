@@ -29,10 +29,6 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                                 </svg>Kategoriler
                             </span>
-                            <!--
-                                TODO: 
-                                Menu açildiktan sonra farklı bir yere tıklanınca menunun kapanması sağlamak için 'group-focus-within:block' özelliği araştırılacak.
-                            -->
                             <ul class="st-header-nav peer-checked:block">
                                 <li class="st-header-nav-link"><a href="javascript:;">Galeri</a></li>
                                 <li class="st-header-nav-link"><a href="javascript:;">Makale</a></li>
@@ -69,140 +65,140 @@
                     <div class="st-slider" id="slider">
                         <div class="st-slider-track" id="sliderTrack">
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=1" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=1" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=2" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=2" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=3" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=3" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=4" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=4" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=5" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=5" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=6" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=6" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=7" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=7" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=8" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=8" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=9" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=9" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=10" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=10" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=11" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=11" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=12" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=12" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=13" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=13" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=14" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=14" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=15" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=15" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=16" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=16" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=17" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=17" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=18" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=18" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=19" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=19" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
                                 </div>
                             </div>
                             <div class="st-slider-group group">
-                                <img src="https://picsum.photos/200/150?random=20" alt="" class="st-slider-img">
+                                <img src="https://picsum.photos/200/150?random=20" alt="." class="st-slider-img">
                                 <div class="st-slider-text">
                                     <h4>Title</h4>
                                     <p>Description</p>
@@ -219,7 +215,7 @@
                 </section>
 
                 <section class="bg-gray-300 dark:bg-gray-700" id="article-contents">
-                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="grid lg:grid-cols-2">
                         <div class="p-5 lg:p-10 bg-gray-50 text-gray-600 dark:bg-gray-600/50 dark:text-gray-300" id="best-articles">
                             <h2><span class="p-3">EN İYİ MAKALELER</span></h2>
                             <p class="p-3 mb-2 border-b border-gray-400 dark:border-gray-800">Makaleler bölümündeki en iyi 5 içerik.</p>
@@ -332,14 +328,14 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-2 bg-white text-gray-600 dark:bg-gray-700 dark:text-gray-300" id="popular-contents">
+                <section class="px-5 lg:px-10 py-5 bg-white text-gray-600 dark:bg-gray-700 dark:text-gray-300" id="popular-contents">
                     <div class="block py-5 border-b border-gray-300 dark:border-gray-600">
                         <h2>POPÜLER KATEGORİLER</h2>
                         <p>Tüm kategoriler, tüm eserler.</p>
                     </div>
                     <div class="block md:flex justify-between py-5">
                         <div id="popular-gallery">
-                            <h3><a href="javascript:;" class="st-link-hover-orange">GALERİ KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="st-orange-link">GALERİ KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Yeşilçam</a>
                                 <a href="javascript:;" class="block hover:underline">Müzisyenler</a>
@@ -354,7 +350,7 @@
                             </nav>
                         </div>
                         <div id="popular-articles">
-                            <h3><a href="javascript:;" class="hover:text-orange-500 transition duration-300">MAKALE KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="st-orange-link">MAKALE KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Makaleler</a>
                                 <a href="javascript:;" class="block hover:underline">Felsefe</a>
@@ -369,7 +365,7 @@
                             </nav>
                         </div>
                         <div id="popular-poems">
-                            <h3><a href="javascript:;" class="hover:text-orange-500 transition duration-300">ŞİİR KATEGORİLERİ</a></h3>
+                            <h3><a href="javascript:;" class="st-orange-link">ŞİİR KATEGORİLERİ</a></h3>
                             <nav class="py-5">
                                 <a href="javascript:;" class="block hover:underline">Necip Fazıl Kısakürek</a>
                                 <a href="javascript:;" class="block hover:underline">Edip Cansever</a>
@@ -386,7 +382,7 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-5 space-y-1 bg-white dark:bg-gray-700" id="expand-collapse">
+                <section class="px-5 lg:px-10 py-5 bg-white dark:bg-gray-700" id="expand-collapse">
                     <details class="st-details group" data-name="open-close" id="home1">
                         <summary class="st-summary">
                             <h3>Haftanın Yazısı: Dada Manifestosu</h3>
@@ -394,10 +390,10 @@
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </summary>
-                        <div class="pb-4 space-y-2 text-gray-600 dark:text-gray-200">
-                            <h4>Dada Manifestosu</h4>
-                            <p>Gazetecileri beklenmedik bir dünyanın kapısına getiren bir sözcüğün – DADA – büyüsü, bizim için hiçbir önem taşımıyor...</p>
-                            <p>Yazar: Tristan Tzara</p>
+                        <div class="pb-4 text-gray-600 dark:text-gray-200">
+                            <h4><a href="javascript:;" class="hover:underline">Dada Manifestosu</a></h4>
+                            <p class="py-2">Gazetecileri beklenmedik bir dünyanın kapısına getiren bir sözcüğün – DADA – büyüsü, bizim için hiçbir önem taşımıyor...</p>
+                            <p class="py-2">Yazar: Tristan Tzara</p>
                         </div>
                     </details>
 
@@ -408,9 +404,9 @@
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </summary>
-                        <div class="pb-4 space-y-2 text-gray-600 dark:text-gray-200">
-                            <h4>Daha Ne Zaman</h4>
-                            <p>
+                        <div class="pb-4 text-gray-600 dark:text-gray-200">
+                            <h4><a href="javascript:;" class="hover:underline">Daha Ne Zaman</a></h4>
+                            <p class="py-2">
                                 Toz pembe hayaller<br>
                                 Kuran mebuslar,<br>
                                 Umutları, renkli<br>
@@ -433,7 +429,7 @@
                                 Acılar hep bana mı?..<br>
                                 Daha ne zaman?!..<br>
                             </p>
-                            <p><b>Şair:</b> <a href="javascript:;" class="hover:underline">M.Nazım Güler</a></p>
+                            <p class="py-2"><b>Şair:</b> <a href="javascript:;" class="hover:underline">M.Nazım Güler</a></p>
                         </div>
                     </details>
                 </section>
