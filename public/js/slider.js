@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function goToSlide(index) {
         TRACK.style.transform = `translateX(-${index * 100}%)`;
-        BUTTONS.forEach(btn => btn.classList.remove('bg-red-500'));
-        BUTTONS[index].classList.add('bg-red-500');
+        BUTTONS.forEach(btn => btn.classList.remove('bg-orange-500'));
+        BUTTONS[index].classList.add('bg-orange-500');
         currentIndex = index;
     }
 
