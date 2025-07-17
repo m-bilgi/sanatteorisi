@@ -530,6 +530,7 @@
 
         <div class="st-modal invisible" id="login-modal">
             <form name="loginForm" id="login-form">
+                @csrf
                 <div class="st-modal-content" data-name="modal-content">
                     <div class="dark:text-gray-200"><h2>Login</h2></div>
                     <div class="flex justify-end dark:text-gray-200">
