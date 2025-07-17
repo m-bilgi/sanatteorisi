@@ -1,5 +1,5 @@
 @layer components {
-    .st-container {@apply 3xl:w-[1905px] justify-self-center;}
+    .st-container {@apply w-full 3xl:w-[1905px] justify-self-center;}
     .st-header {@apply flex justify-between sticky top-0 z-50 h-16 px-5 lg:px-10 items-center bg-gray-800 dark:bg-black drop-shadow-md text-gray-400;}
     .st-header-logo {@apply text-gray-300 font-bold;}
     .st-header-center {@apply flex-1 max-w-50 mx-auto py-3 ml-2 lg:ml-10 hover:text-orange-500 lg:hover:bg-white transition duration-300 dark:hover:bg-gray-700;}
