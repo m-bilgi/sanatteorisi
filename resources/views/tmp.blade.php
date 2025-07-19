@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sanat Teorisi</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <script src="{{ url('js/utils.js') }}"></script>
-        <script src="{{ url('js/cookie.js') }}"></script>
-        <script src="{{ url('js/slider.js') }}"></script>
-        <script src="{{ url('js/modal.js') }}"></script>
+        <script src="{{ asset('assets/js/utils.js') }}"></script>
+        <script src="{{ asset('assets/js/cookie.js') }}"></script>
+        <script src="{{ asset('assets/js/slider.js') }}"></script>
+        <script src="{{ asset('assets/js/modal.js') }}"></script>
     </head>
     <body class="light" id="body">
         <div class="st-container" id="container">
