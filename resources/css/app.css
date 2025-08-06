@@ -18,6 +18,7 @@
 @layer base {
     html {@apply scroll-smooth;}
     body {@apply bg-gray-100 dark:bg-gray-900;}
+    main {@apply bg-white dark:bg-gray-700;}
     h1 {@apply text-2xl lg:text-3xl font-medium;}
     h2 {@apply text-xl lg:text-2xl font-bold;}
     h3 {@apply md:text-lg lg:text-xl font-bold;}
