@@ -382,7 +382,9 @@
                     </div>
                 </section>
 
-                <section class="px-5 lg:px-10 py-5 space-y-1 bg-white dark:bg-gray-700" id="expand-collapse">
+                <div class="py-5"></div>
+
+                <section class="px-5 lg:px-10 py-0.5" id="expand-collapse-1">
                     <details class="st-details group" data-name="open-close" id="home1">
                         <summary class="st-summary">
                             <h3>Haftanın Yazısı: Dada Manifestosu</h3>
@@ -396,7 +398,9 @@
                             <p class="py-2">Yazar: Tristan Tzara</p>
                         </div>
                     </details>
+                </section>
 
+                <section class="px-5 lg:px-10 py-0.5" id="expand-collapse-2">
                     <details class="st-details group" data-name="open-close" id="home2">
                         <summary class="st-summary">
                             <h3>Haftanın Şiiri: Daha Ne Zaman</h3>
@@ -433,6 +437,8 @@
                         </div>
                     </details>
                 </section>
+
+                <div class="py-5"></div>
 
                 <section class="st-bottom" id="bottom">
                     <div class="st-bottom-up" id="bottom-up">
