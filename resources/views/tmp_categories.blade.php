@@ -1,8 +1,3 @@
-{{--
-    1. 
-
-    style.css
---}}
 <!doctype html>
 <html lang="tr">
     <head>
@@ -456,4 +451,5 @@
 * h4: Content title
 * h5: UI bottom title
 * h6: UI bottom & footer title
+
 -->
