@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let interval = null;
 
+    if (!SLIDER) return;
+
     function goToSlide(index) {
         TRACK.style.transform = `translateX(-${index * 100}%)`;
         BUTTONS.forEach(btn => btn.classList.remove('bg-orange-500'));
